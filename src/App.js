@@ -4,6 +4,7 @@ import WebcamCapture from "./WebcamCapture";
 import {  Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import Preview from "./Preview";
+import Chats from "./Chats";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
           <Route path="/" element={<WebcamCapture />} />
           <Route path="/preview" element={<Preview />} />
+          <Route path="/chats" element={<Chats />} />
       </Routes>
       </BrowserRouter>
     </div>

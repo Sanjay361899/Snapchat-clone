@@ -47,8 +47,8 @@ const Preview = () => {
               //profilePicture,
               timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             });
-            navigate("/chats");
           });
+          navigate("/chats");
       }
     );
   };
