@@ -13,8 +13,7 @@ import TimerIcon from "@mui/icons-material/Timer";
 import CropIcon from "@mui/icons-material/Crop";
 import { Send } from "@mui/icons-material";
 import {v4 as uuid } from "uuid";
-import { db, storage } from "./firebase";
-import firebase from "firebase/compat/app";
+import firebase , { db, storage } from "./firebase";
 const Preview = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -47,8 +46,8 @@ const Preview = () => {
               //profilePicture,
               timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             });
+            navigate("/chats");
           });
-          navigate("/chats");
       }
     );
   };
