@@ -1,6 +1,8 @@
 import firebase from "firebase/compat/app";
+import {getFirestore} from "firebase/firestore"
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import 'firebase/compat/storage';
 const firebaseConfig = {
     apiKey: "AIzaSyAyaURuxb7UWVXSBn9pdbbsW0HWbMSVdZ8",
     authDomain: "snapchat-clone-361899.firebaseapp.com",
@@ -12,7 +14,7 @@ const firebaseConfig = {
   };
 
   const firebaseApp = firebase.initializeApp(firebaseConfig);
-  const db= firebaseApp.firestore();
+  const db= getFirestore();
   const auth= firebase.auth();
   const storage= firebase.storage();
   const provider= new firebase.auth.GoogleAuthProvider(); 
