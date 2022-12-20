@@ -18,3 +18,23 @@
     flex-direction: column;
     gap: 5px;
 }
+.preview__footer{
+    background-color: yellow;
+    color:black;
+    display: flex;
+    border-radius: 30px;
+    margin-bottom:9px;
+    padding: 7px;
+    align-items: center;
+    justify-content:space-evenly ;
+    cursor: pointer;
+    right: 1px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.preview__sendIcon{
+    font-size:20px !important;
+    margin-left:2px;
+}

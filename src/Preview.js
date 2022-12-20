@@ -11,6 +11,7 @@ import AttachFileIcon from '@mui/icons-material/AttachFile';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import TimerIcon from '@mui/icons-material/Timer';
 import CropIcon from '@mui/icons-material/Crop';
+import { Send } from "@mui/icons-material";
 const Preview = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -18,6 +19,9 @@ const Preview = () => {
   const closePreview = () => {
     dispatch(resetCameraImage());
   };
+  const sendPost=()=>{
+    
+  }
   useEffect(() => {
     if (!cameraImage) {
       navigate("/");
@@ -36,6 +40,10 @@ const Preview = () => {
         <TimerIcon/>
       </div>
       <img src={cameraImage} alt="" />
+      <div className="preview__footer">
+        <h5>Send Now</h5>
+        <Send  fontSize="small" className="preview__sendIcon"/>
+      </div>
     </div>
   );
 };
