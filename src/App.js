@@ -6,8 +6,12 @@ import { BrowserRouter } from "react-router-dom";
 import Preview from "./Preview";
 import Chats from "./Chats";
 import ChatView from "./ChatView";
+import { selectUser } from "./features/appSlices";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
+  const user = useSelector(selectUser);
+  const dispatch=useDispatch();
   return (
     <div className="App">
     <BrowserRouter>
