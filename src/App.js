@@ -5,6 +5,7 @@ import {  Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import Preview from "./Preview";
 import Chats from "./Chats";
+import ChatView from "./ChatView";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<WebcamCapture />} />
           <Route path="/preview" element={<Preview />} />
           <Route path="/chats" element={<Chats />} />
+          <Route path="/chats/view" element={<ChatView />} />
       </Routes>
       </BrowserRouter>
     </div>
