@@ -14,34 +14,30 @@ import { auth } from "./firebase";
 function App() {
   const user = useSelector(selectUser);
   const dispatch=useDispatch();
-  useEffect(()=>{
-    auth.onAuthStateChanged((authUser)=>{
-      if(authUser){
-        dispatch(login({
-         username:authUser.displayName,
-         profilePic:authUser.photoURL,
-         id:authUser.uid,
-        }))
-      }
-      else{
-        dispatch(logout());
-      }
-    })
-  })
+  // useEffect(()=>{
+  //   auth.onAuthStateChanged((authUser)=>{
+  //     if(authUser){
+  //       dispatch(login({
+  //        username:authUser.displayName,
+  //        profilePic:authUser.photoURL,
+  //        id:authUser.uid,
+  //       }))
+  //     }
+  //     else{
+  //       dispatch(logout());
+  //     }
+  //   })
+  // })
   return (
     <div className="App">
     <BrowserRouter>
-      {!user ?
-      <Routes>
-      <Route path="/" element={<Login/>}/>
-       </Routes> 
-       :(
+         
       <Routes>
           <Route path="/" element={<WebcamCapture />} />
           <Route path="/preview" element={<Preview />} />
           <Route path="/chats" element={<Chats />} />
           <Route path="/chats/view" element={<ChatView />} />
-      </Routes>)}
+      </Routes>
       </BrowserRouter>
     </div>
   );
